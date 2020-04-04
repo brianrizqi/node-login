@@ -59,7 +59,8 @@ router.post('/login', (req, res) => {
                 })
                 res.json({
                     token: token,
-                    users: users.dataValues
+                    users: users.dataValues,
+                    secret: process.env.SECRET_KEY
                 })
             } else {
                 res.send('User does not exist')
@@ -71,25 +72,31 @@ router.post('/login', (req, res) => {
 })
 
 router.get('/profile', (req, res) => {
-    var decoded = jwt.verify(req.headers['authorization'], process.env.SECRET_KEY);
-    res.send(decoded)
-    //
-    // User.findOne({
-    //     where: {
-    //         id: decoded.id
-    //     }
-    // })
-    //     .then(users => {
-    //         if (users) {
-    //             res.json(users)
-    //         } else {
-    //             res.send('User does not exist')
-    //         }
-    //     })
-    //     .catch(err => {
-    //         res.send('error : ' + err)
-    //     })
+    const authHeader = req.headers['authorization'];
+    const token = authHeader && authHeader.split(' ')[1];
+    if (token == null) res.sendStatus(401);
+    var user;
+    jwt.verify(token, process.env.SECRET_KEY, (err, result) => {
+        if (err) res.send(err)
+        user = result;
+    });
 
-})
+    User.findOne({
+        where: {
+            id: user.id
+        }
+    })
+        .then(users => {
+            if (users) {
+                res.json(users)
+            } else {
+                res.send('User does not exist')
+            }
+        })
+        .catch(err => {
+            res.send('error : ' + err)
+        })
+
+});
 
 module.exports = router;
