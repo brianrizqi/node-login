@@ -1,0 +1,52 @@
+<template>
+  <section class="landing">
+    <div class="dark-overlay">
+      <div class="landing-inner">
+        <h1 class="x-large">Vue Login</h1>
+        <p class="lead">
+          Lorem ipsum dolor sit amet
+        </p>
+        <div class="buttons">
+          <router-link to="/" class="btn btn-primary">
+            Register
+          </router-link>
+          <router-link to="/login" class="btn btn">
+            Login
+          </router-link>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script>
+  export default {
+    name: 'HelloWorld',
+    data() {
+      return {
+        msg: 'Welcome to Your Vue.js App'
+      }
+    }
+  }
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+  h1, h2 {
+    font-weight: normal;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  a {
+    color: #42b983;
+  }
+</style>
