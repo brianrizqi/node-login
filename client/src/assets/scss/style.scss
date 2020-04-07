@@ -1,5 +1,6 @@
 @import "config";
 @import "utilities";
+@import "form";
 
 * {
   box-sizing: border-box;
@@ -70,5 +71,11 @@ img {
     align-items: center;
     justify-content: center;
     text-align: center;
+  }
+}
+
+.d {
+  &-none {
+    display: none;
   }
 }

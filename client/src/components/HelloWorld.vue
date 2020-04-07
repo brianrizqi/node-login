@@ -7,7 +7,7 @@
           Lorem ipsum dolor sit amet
         </p>
         <div class="buttons">
-          <router-link to="/" class="btn btn-primary">
+          <router-link to="/register" class="btn btn-primary">
             Register
           </router-link>
           <router-link to="/login" class="btn btn">

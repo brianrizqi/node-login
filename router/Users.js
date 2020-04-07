@@ -58,9 +58,7 @@ router.post('/login', (req, res) => {
                     expiresIn: 1440
                 })
                 res.json({
-                    token: token,
-                    users: users.dataValues,
-                    secret: process.env.SECRET_KEY
+                    token: token
                 })
             } else {
                 res.send('User does not exist')

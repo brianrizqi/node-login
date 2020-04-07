@@ -1,3 +1,92 @@
+.m-1 {
+  margin: 1rem;
+}
+
+.my-1 {
+  margin: 1rem 0;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.py-1 {
+  padding: 1rem 0;
+}
+
+.m-2 {
+  margin: 2rem;
+}
+
+.my-2 {
+  margin: 2rem 0;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.py-2 {
+  padding: 2rem 0;
+}
+
+.m-3 {
+  margin: 3rem;
+}
+
+.my-3 {
+  margin: 3rem 0;
+}
+
+.p-3 {
+  padding: 3rem;
+}
+
+.py-3 {
+  padding: 3rem 0;
+}
+
+.m-4 {
+  margin: 4rem;
+}
+
+.my-4 {
+  margin: 4rem 0;
+}
+
+.p-4 {
+  padding: 4rem;
+}
+
+.py-4 {
+  padding: 4rem 0;
+}
+
+.m-5 {
+  margin: 5rem;
+}
+
+.my-5 {
+  margin: 5rem 0;
+}
+
+.p-5 {
+  padding: 5rem;
+}
+
+.py-5 {
+  padding: 5rem 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+}
+
 .x-large {
   font-size: 4rem;
   line-height: 1.2;
@@ -15,6 +104,22 @@
   margin-bottom: 1rem;
 }
 
+.text-primary {
+  color: #17a2b8;
+}
+.text-success {
+  color: #28a745;
+}
+.text-danger {
+  color: #dc3455;
+}
+.text-dark {
+  color: #343a40;
+}
+.text-light {
+  color: #f4f4f4;
+}
+
 .btn {
   display: inline-block;
   background-color: #f4f4f4;
@@ -25,6 +130,7 @@
   font-size: 1rem;
   outline: none;
   transition: all 0.2s ease-in;
+  border-radius: 3px;
 }
 .btn.btn-primary {
   background-color: #17a2b8;
@@ -42,7 +148,7 @@
 }
 .btn.btn-danger {
   background-color: #dc3455;
-  color: #333;
+  color: #fff;
 }
 .btn.btn-danger:hover {
   background: #e04a67;
@@ -88,7 +194,7 @@
 }
 .bg-danger {
   background-color: #dc3455;
-  color: #333;
+  color: #fff;
 }
 .bg-success {
   background-color: #28a745;
@@ -107,6 +213,55 @@
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.7);
+}
+
+.alert {
+  padding: 0.8rem;
+  margin: 1rem;
+  opacity: 0.9;
+  background: #f4f4f4;
+  color: #333;
+}
+.alert.alert-primary {
+  background-color: #17a2b8;
+  color: #fff;
+}
+.alert.alert-success {
+  background-color: #28a745;
+  color: #fff;
+}
+.alert.alert-danger {
+  background-color: #dc3455;
+  color: #fff;
+}
+.alert.alert-dark {
+  background-color: #343a40;
+  color: #fff;
+}
+.alert.alert-light {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.form-group {
+  margin: 1.2rem 0;
+}
+.form-text {
+  display: block;
+  margin-top: 0.3rem;
+  color: #888;
+}
+.form input[type=text],
+.form input[type=email],
+.form input[type=password],
+.form input[type=date],
+.form select,
+.form textarea {
+  display: block;
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 0.4rem;
+  border: 1px solid #ccc;
 }
 
 * {
@@ -175,6 +330,10 @@ img {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.d-none {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
